@@ -11,8 +11,8 @@
 
                     <div class="card card-login card-hidden mb-3">
                         <img src="{{ asset('/img/xr3.png') }}" alt="">
-                        <div class="card-header card-header-primary text-center">
-                            <h4 class="card-title"><strong>{{ __('Login') }}</strong></h4>
+                        <div class="card-header card-header-warning text-center">
+                            <h3 class="card-title"><strong>{{ __('Login') }}</strong></h3>
                             {{-- <div class="social-line">
                                 <a href="#" class="btn btn-just-icon btn-link btn-white">
                                     <i class="fa fa-facebook-square"></i>
@@ -72,7 +72,7 @@
                             </div>
                         </div>
                         <div class="card-footer justify-content-center">
-                            <button type="submit" class="btn btn-primary btn-link btn-lg">{{ __('Log in') }}</button>
+                            <button type="submit" class="btn btn-warning btn-round">{{ __('Log in') }}</button>
                         </div>
                     </div>
                 </form>
