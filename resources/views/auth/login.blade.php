@@ -26,7 +26,7 @@
                             </div> --}}
                         </div>
                         <div class="card-body">
-                            <div class="bmd-form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
+                            {{-- <div class="bmd-form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
@@ -41,6 +41,27 @@
                                     <div id="email-error" class="error text-danger pl-3" for="email"
                                         style="display: block;">
                                         <strong>{{ $errors->first('email') }}</strong>
+                                    </div>
+                                @endif
+                            </div> --}}
+
+                            {{-- Username --}}
+
+                            <div class="bmd-form-group{{ $errors->has('username') ? ' has-danger' : '' }}">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">face</i>
+                                        </span>
+                                    </div>
+                                    <input type="text" name="username" class="form-control"
+                                        placeholder="{{ __('username or email') }}" value="{{ old('username', null) }}" required
+                                        autocomplete="username" autofocus>
+                                </div>
+                                @if ($errors->has('username'))
+                                    <div id="username-error" class="error text-danger pl-3" for="username"
+                                        style="display: block;">
+                                        <strong>{{ $errors->first('username') }}</strong>
                                     </div>
                                 @endif
                             </div>
