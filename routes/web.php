@@ -19,5 +19,6 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/user/create',[App\Http\Controllers\UserController::class,'create']);
+Route::get('/user/create',[App\Http\Controllers\UserController::class,'create'])->name('users.create');
 Route::post('/users', [App\Http\Controllers\UserController::class,'store'])->name('users.store');
+Route::Get('users',[App\Http\Controllers\UserController::class,'index'])->name('users.index');
