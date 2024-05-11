@@ -12,6 +12,12 @@
                                     <p class="card-category">Lista de Usuarios</p>
                                 </div>
                                 <div class="card-body">
+                                    @if (session('success'))
+                                    <div class="alert alert-success" role="succes">
+                                        {{session('success')}}
+                                    </div>
+                                    
+                                    @endif
                                     <div class="row">
                                         <div class="col-12 text-right">
                                             <a href="{{route('users.create')}}" class="btn btn-sm btn-warning" style="font-weight: bold;">Crear Usuario</a>
@@ -35,7 +41,17 @@
                                                     <td>{{$user->email}}</td>
                                                     <td>{{$user->username}}</td>
                                                     <td>{{$user->create_at}}</td>
-                                                    <td></td>
+                                                    <td class="td-actions text-right">
+                                                        <button class="btn btn-info" type="button">
+                                                            <i class="material-icons">person</i>
+                                                        </button>
+                                                        <button class="btn btn-warning" type="button">
+                                                            <i class="material-icons">edit</i>
+                                                        </button>
+                                                        <button class="btn btn-danger" type="button">
+                                                            <i class="material-icons">close</i>
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 @endforeach
                                             </tbody>
