@@ -25,6 +25,24 @@
   box-sizing: border-box;
 }
 
+#avatar{
+  height: 100px;
+  width: 100px; 
+}
+
+.author{
+  text-align: center;
+}
+
+.card-description{
+  text-align: center;
+}
+
+.card-footer1{
+  text-align: center;
+}
+
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -34,9 +52,13 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+
+
 @-ms-viewport {
   width: device-width;
 }
+
+
 
 article,
 aside,

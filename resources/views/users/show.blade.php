@@ -5,21 +5,21 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header card-header-primary">
+                        <div class="card-header card-header-info">
                             <div class="card-title">Usuarios</div>
                             <p class="card-category">Vista detallada del usuario {{$user->name}}</p>
                         </div>
                         {{-- body --}}
-                        <div class="card-body">
+                        <div class="card-body" style="display: flex; justify-content: center">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-10">
                                     <div class="card card-user">
                                         <div class="card-body">
                                             <div class="card-body">
                                                 <p class="card-text">
                                                     <div class="author">
                                                         <a href="#">
-                                                            <img src="{{asset('/img/avatar.png')}}" alt="image" class="avatar">
+                                                            <img src="{{asset('/img/avatar.png')}}" alt="image" class="avatar" id="avatar">
                                                             <h5 class="title mt-3">{{$user->name}}</h5>
                                                         </a>
                                                         <p class="description">
@@ -33,9 +33,10 @@
                                                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque natus velit eos ratione
                                                 </div>
                                             </div>
-                                            <div class="card-footer">
+                                            <div class="card-footer1">
                                                 <div class="button-container">
-                                                    <div class="btn btn-sm btn-primary">Editar</div>
+                                                    <a href="{{route('users.index')}}" class="btn btn-sm btn-success mr-4">Volver</a>
+                                                    <div class="btn btn-sm btn-warning ml-6">Editar</div>
                                                 </div>
                                             </div>
                                         </div>
