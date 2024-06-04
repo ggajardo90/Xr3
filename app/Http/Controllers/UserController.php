@@ -31,4 +31,11 @@ class UserController extends Controller
             ]);
         return redirect()->route('users.index')->with('success', 'Usuario creado correctamente');
     }
+
+    public function show ($id)
+    {
+        $user = User::findOrfail($id);
+        // dd($user);
+        return view ('users.show', compact ('user'));
+    }
 }

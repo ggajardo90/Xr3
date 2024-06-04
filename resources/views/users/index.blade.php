@@ -16,7 +16,6 @@
                                     <div class="alert alert-success" role="succes">
                                         {{session('success')}}
                                     </div>
-                                    
                                     @endif
                                     <div class="row">
                                         <div class="col-12 text-right">
